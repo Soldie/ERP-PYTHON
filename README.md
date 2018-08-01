@@ -36,6 +36,6 @@ Veja também a lista de [contribuidores](https://github.com/your/project/contrib
 
 Este projeto está licenciado sob a licença GNU3 - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes
 <p align="center">
-  <img src="(https://raw.githubusercontent.com/rafikmoreira/augen/master/data/img/2.png"/>
+  <img src="https://raw.githubusercontent.com/rafikmoreira/augen/master/data/img/2.png"/>
 </p>
 
