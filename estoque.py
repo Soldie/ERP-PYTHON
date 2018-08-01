@@ -14,7 +14,7 @@ def estoque_cadastro():
         except:
             if len(produto_nome) == 0:
                 print('ERRO: POR FAVOR, DIGITE O NOME DO PRODUTO. VAMOS TENTAR NOVAMENTE:')
-
+    separar_input()
     produto_tipo = ''
     while produto_tipo == '':
         try:
@@ -23,7 +23,7 @@ def estoque_cadastro():
         except:
             if len(produto_tipo) == 0:
                 print('ERRO: POR FAVOR, DIGITE O TIPO DO PRODUTO. VAMOS TENTAR NOVAMENTE:')
-
+    separar_input()
     produto_cor = ''
     while produto_cor == '':
         try:
@@ -31,7 +31,7 @@ def estoque_cadastro():
         except:
             if len(produto_cor) == 0:
                 print('ERRO: POR FAVOR, DIGITE A COR DO PRODUTO. VAMOS TENTAR NOVAMENTE:')
-
+    separar_input()
     produto_valor = ''
     while produto_valor == '':
         try:
@@ -40,7 +40,7 @@ def estoque_cadastro():
             if len(produto_valor) == 0:
                 print(
                     'ERRO: POR FAVOR, DIGITE O VALOR UNITÁRIO DO PRODUTO. VAMOS TENTAR NOVAMENTE:')
-
+    separar_input()
     produto_quantidade = ''
     while produto_quantidade == '':
         try:
@@ -49,7 +49,7 @@ def estoque_cadastro():
             if len(produto_quantidade) == 0:
                 print(
                     'ERRO: POR FAVOR, DIGITE A QUANTIDADE DO PRODUTO EM ESTOQUE. VAMOS TENTAR NOVAMENTE:')
-
+    separar_input()
     confirma = 'k'
     while confirma[0] not in 'SN':
         confirma = str(input(f"""VOCÊ CONFIRMA O REGISTRO DO PRODUTO {produto_nome} EM QUANTIDADE {produto_quantidade}
@@ -69,7 +69,7 @@ DO TIPO {produto_tipo} COM VALOR UNITÁRIO DE R${produto_valor:.2f} NA COR {prod
         conn.close()
 
         # FINAL CADASTRO PRODUTO //
-
+        separar_input()
         print('Produto registrado com sucesso!')
         time.sleep(3)
 
@@ -88,7 +88,7 @@ def lista_estoque():
     for linha in cursor.fetchall():
         print(f"""PRODUTO: {linha[0]} - PRODUTO ID: {linha[1]} - TIPO DO PRODUTO: {linha[2]} - COR DO PRODUTO: {linha[3]}\nVALOR DO PRODUTO: R${linha[4]:.2f}'
 QUANTIDADE EM ESTOQUE: {linha[5]} - DATA DO REGISTRO: {formatar_data(linha[6])}""")
-        print('-' * 102)
+        separar_input()
     conn.close()
 
     confirma = 'k'

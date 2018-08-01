@@ -36,6 +36,7 @@ class Augen:
             webbrowser.open('https://www.gnu.org/licenses/gpl-3.0.html')
             app.iniciar()
         elif d == int(len(c)):
+            separar_input()
             print('Obrigado por utilizar o Augen!')
             time.sleep(2)
             print('Tenha um bom dia!')

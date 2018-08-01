@@ -4,11 +4,12 @@ import time
 import sys
 from funcoes import *
 
+
 def registrar_vendas_vendasepagamentos():
     cliente_cpfvenda = ''
     while cliente_cpfvenda == '':
         try:
-            cliente_cpfvenda = str(input('\n[{:-^100}]\n\n'
+            cliente_cpfvenda = str(input('[{:-^100}]\n\n'
                                          'DIGITE O CPF DO CLIENTE: '.format(
                 'REGISTRAR VENDA DE PRODUTO')).strip())
             v = cliente_cpfvenda.isnumeric()
@@ -23,9 +24,10 @@ def registrar_vendas_vendasepagamentos():
             if len(cliente_cpfvenda) == 0:
                 print('ERRO: POR FAVOR, DIGITE O CPF DO CLIENTE. VAMOS TENTAR NOVAMENTE:')
 
-
+    separar_input()
     cliente_cpf_dados(cliente_cpfvenda)
     produtoclientevenda = cliente_cpf_dados_nome(cliente_cpfvenda)
+    separar_input()
     produto_idvenda = ''
     while produto_idvenda == '':
         try:
@@ -34,13 +36,11 @@ def registrar_vendas_vendasepagamentos():
             if len(produto_idvenda) == 0:
                 print('ERRO: POR FAVOR, DIGITE O ID DO PRODUTO. VAMOS TENTAR NOVAMENTE: ')
 
-
-
     info_produto(produto_idvenda)
 
     produto_nomevenda = info_produto_nome(produto_idvenda)
     produtopreco1 = info_produto_valor(produto_idvenda)
-
+    separar_input()
     quantidade = ''
     while quantidade == '':
         try:
@@ -53,8 +53,8 @@ def registrar_vendas_vendasepagamentos():
                 print(
                     'ERRO: POR FAVOR, DIGITE A QUANTIDADE DE PRODUTO COMPRADO. VAMOS TENTAR NOVAMENTE:')
 
-
     produto_valor_final = produtopreco1 * quantidade
+    separar_input()
     produtoparcelas = ''
     while produtoparcelas == '':
         try:
@@ -67,7 +67,7 @@ def registrar_vendas_vendasepagamentos():
             if len(produtoparcelas) == 0:
                 print('ERRO: POR FAVOR, DIGITE A QUANTIDADE DE PARCELAS. VAMOS TENTAR NOVAMENTE:')
 
-
+    separar_input()
     produtovendas_valor_entrada = ''
     while produtovendas_valor_entrada == '':
         try:
@@ -82,7 +82,6 @@ def registrar_vendas_vendasepagamentos():
                 print(
                     'ERRO: POR FAVOR, DIGITE O VALOR DA ENTRADA USANDO 0 CASO ELA NÃO EXISTA. VAMOS TENTAR NOVAMENTE:')
 
-
     q = quantidade
     v = produtopreco1 * q
     e = produtovendas_valor_entrada
@@ -91,10 +90,11 @@ def registrar_vendas_vendasepagamentos():
     p = produtoparcelas
 
     vf = (v - e) / p
+    separar_input()
     confirma = 'k'
     while confirma[0] not in 'SN':
         confirma = str(input(f"""VOCÊ CONFIRMA A VENDA DO PRODUTO {produto_nomevenda} PARA O CLIENTE DE CPF {formatar_cpf(cliente_cpfvenda)} NOME {produtoclientevenda}
-        EM QUANTIDADE {quantidade} NO VALOR DE R${produtopreco1 * q:.2f} COM ENTRADA DE R${produtovendas_valor_entrada:.2f} E O RESTANTE R${(v - e):.2f} EM {produtoparcelas} PARCELAS DE R${vf:.2f}? [S/n] """)).upper().strip()
+EM QUANTIDADE {quantidade} NO VALOR DE R${produtopreco1 * q:.2f} COM ENTRADA DE R${produtovendas_valor_entrada:.2f} E O RESTANTE R${(v - e):.2f} EM {produtoparcelas} PARCELAS DE R${vf:.2f}? [S/n] """)).upper().strip()
 
     if confirma[0] == 'S':
         # inserindo dados na tabela //
@@ -112,6 +112,6 @@ def registrar_vendas_vendasepagamentos():
         conn.commit()
 
         conn.close()
-
+        separar_input()
         print('Registrado com sucesso!')
         time.sleep(3)

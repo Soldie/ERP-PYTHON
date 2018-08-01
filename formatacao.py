@@ -80,3 +80,6 @@ def formatar_rg(c):
     b = c[0:2], c[2:4], c[4:7], c[7:10]
     c = '{}-{}.{}.{}'.format(b[0].upper(), b[1], b[2], b[3])
     return c
+
+def separar_input():
+    print('-'*102)

@@ -16,6 +16,7 @@ def cliente_cadastro():
             if len(cliente_nome) == 0:
                 print('ERRO: POR FAVOR, DIGITE O NOME COMPLETO DO CLIENTE. VAMOS TENTAR NOVAMENTE: ')
 
+    separar_input()
     cliente_telefone = ''
     while cliente_telefone == '':
         try:
@@ -38,7 +39,7 @@ def cliente_cadastro():
                 print(
                     'ERRO: POR FAVOR, DIGITE O TELEFONE DO CLIENTE. VAMOS TENTAR NOVAMENTE: ')
                 cliente_telefone == ''
-
+    separar_input()
     cliente_cpf = ''
     while cliente_cpf == '':
         try:
@@ -54,7 +55,7 @@ def cliente_cadastro():
         except:
             if len(cliente_cpf) == 0:
                 print('ERRO: POR FAVOR, DIGITE O CPF DO CLIENTE. VAMOS TENTAR NOVAMENTE: ')
-
+    separar_input()
     cliente_rg = ''
     while cliente_rg == '':
         try:
@@ -68,7 +69,7 @@ def cliente_cadastro():
 
     estados = {'MG' == 'MINAS GERAIS', 'SC' == 'SANTA CATARINA', 'SP' == 'SÃO PAULO',
                'TESTE' == 'VERSÃO DE TESTE'}
-
+    separar_input()
     cliente_endereco_estado = ''
     while cliente_endereco_estado == '':
         try:
@@ -94,7 +95,7 @@ def cliente_cadastro():
         except:
             if len(cliente_endereco_estado) == 0:
                 print('ERRO: POR FAVOR, DIGITE O ENDEREÇO - ESTADO. VAMOS TENTAR NOVAMENTE: ')
-
+    separar_input()
     cliente_endereco_cep = ''
     while cliente_endereco_cep == '':
         try:
@@ -102,7 +103,7 @@ def cliente_cadastro():
         except:
             if len(cliente_endereco_cep) == 0:
                 print('ERRO: DIGITE O CEP: VAMOS TENTAR NOVAMENTE: ')
-
+    separar_input()
     cliente_endereco_cidade = ''
     while cliente_endereco_cidade == '':
         try:
@@ -110,7 +111,7 @@ def cliente_cadastro():
         except:
             if len(cliente_endereco_cidade) == 0:
                 print('ERRO: POR FAVOR, DIGITE O ENDEREÇO - CIDADE. VAMOS TENTAR NOVAMENTE: ')
-
+    separar_input()
     cliente_endereco_bairro = ''
 
     while cliente_endereco_bairro == '':
@@ -119,7 +120,7 @@ def cliente_cadastro():
         except:
             if len(cliente_endereco_bairro) == 0:
                 print('ERRO: POR FAVOR, DIGITE O ENDEREÇO - BAIRRO. VAMOS TENTAR NOVAMENTE: ')
-
+    separar_input()
     cliente_endereco_rua = ''
     while cliente_endereco_rua == '':
         try:
@@ -127,7 +128,7 @@ def cliente_cadastro():
         except:
             if len(cliente_endereco_rua) == 0:
                 print('POR FAVOR, DIGITE O ENDEREÇO - RUA. VAMOS TENTAR NOVAMENTE: ')
-
+    separar_input()
     cliente_endereco_numero = ''
     while cliente_endereco_numero == '':
         try:
@@ -135,6 +136,7 @@ def cliente_cadastro():
         except:
             if len(cliente_endereco_numero) == 0:
                 print('ERRO: POR FAVOR, DIGITE O ENDEREÇO - NÚMERO. VAMOS TENTAR NOVAMENTE: ')
+    separar_input()
     confirma = 'k'
     while confirma[0] not in 'SN':
         confirma = str(
@@ -161,6 +163,7 @@ VOCÊ CONFIRMA? [S/n]: """)).strip().upper()
         # FECHA A CONEXÃO
 
         conn.close()
+        separar_input()
         print('Cliente cadastrado com sucesso.')
         time.sleep(2)
         # FINAL CADASTRO CLIENTE //

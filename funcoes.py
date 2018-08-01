@@ -21,7 +21,7 @@ def menu(a):
 # Header do programa
 def programa_header():
     # NÃO REMOVA ESSES DADOS =================>
-    print(f"[{' Augen v0.1 [BETA REVISÃO 1] Copyright (C) 2018 RAFIK MOREIRA DIAS ':-^100}]")
+    print(f"[{' Augen v0.1.1 Copyright (C) 2018 RAFIK MOREIRA DIAS ':-^100}]")
     tempo = time.localtime()
     print('[{:-^100}]'.format(
         ' SISTEMA OPERACIONAL: {} - DATA: {}/{}/{} {}h {}m '.format(sysconfig.get_platform(), tempo[2], tempo[1],
@@ -30,10 +30,6 @@ def programa_header():
         '[{:-^100}]'.format(
 
             ' O programa Augen vem ABSOLUTAMENTE SEM NENHUMA GARANTIA; '.upper()))
-    print('[{:-^100}]'.format(
-        ' Para detalhes, escolha "licença" no menu principal do programa '.upper()))
-    print('[{:-^100}]'.format(
-        ' O Augen é um software GRATUITO e você pode redistribuí-lo sob certas condições. '.upper()))
     print('[{:-^100}]'.format(' SOCIAL: HTTPS://FACEBOOK.COM/RAFIKMOREIRA '))
     print('[{:-^100}]'.format(' GITHUB: HTTPS://GITHUB.COM/RAFIKMOREIRA '))
     print('[{:-^100}]'.format(' CONTATO: RAFIKMOREIRADIAS@OUTLOOK.COM '))
