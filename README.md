@@ -1,5 +1,5 @@
 # Projeto Augen
-
+![Augen](https://raw.githubusercontent.com/rafikmoreira/augen/master/data/img/1.png)
 Augen é um pequeno projeto ERP desenvolvido em Python 3 com a intenção de divulgar a linguagem e ajudar pessoas que estão iniciando na programação.
 
 ## Começando
