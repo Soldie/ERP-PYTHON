@@ -36,3 +36,5 @@ Veja também a lista de [contribuidores](https://github.com/your/project/contrib
 
 Este projeto está licenciado sob a licença GNU3 - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes
 
+<span style="display:block;text-align:center">![Test Automation](Automated-Testing.png)</span>
+
