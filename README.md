@@ -28,7 +28,7 @@ Este código foi escrito para fins de propagação de conhecimento e o autor nã
 
 ## Autores
 
-* **Rafik Moreira** - *Criador do projeto oficial* - [GitHub](https://github.com/rafikmoreira) - [Facebook](https://facebook.com/rafikmoreira)
+* **Rafik Moreira** - *Criador do projeto oficial* - [GitHub](https://github.com/rafikmoreira) - [Facebook](https://facebook.com/get.rafik)
 
 Veja também a lista de [contribuidores](https://github.com/your/project/contributors) que participaram deste projeto.
 
